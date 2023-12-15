@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peter's Example Portfolio Site</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Bienvenue sur Mon Portfolio Numérique</h1>
+      <p>
+        Cette section présente une sélection de projets que j'ai réalisés ce
+        semestre.
+      </p>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul>
+          <li><a href="#projects">Mon Projects</a></li>
+          <li><a href="#resume">Voir Mon CV</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#about">Moi</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main Content Sections -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="card">
+      <h2>Portfolio de Projets</h2>
+      <p>
+        Explorez la diversité de mon travail, des projets de gestion aux projets
+        de design.
+      </p>
+      <div class="flex-me2">
+        <a href="/tic-tac.html" class="btn card-link">Morpion</a>
+        <a
+          href="https://spokesolve.com/team"
+          rel="noreferrer"
+          target="_blank"
+          class="btn card-link"
+          >Site Pro</a
+        >
+        <a
+          href="https://www.explorevaucluse.com/accueil/"
+          rel="noreferrer"
+          target="_blank"
+          class="btn card-link"
+          >Explore Vaucluse</a
+        >
+      </div>
+      <!-- Link to your projects section -->
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="card">
+      <h2>Curriculum Vitae</h2>
+      <p>
+        Un aperçu complet de mon parcours académique, des cours pertinents et
+        des compétences acquises.
+      </p>
+      <a
+        class="flex-me btn"
+        href="https://www.linkedin.com/in/peter-turn-may/"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <img id="linkedIn" src="LinkedIn_icon.svg" alt="" />
+        <span>LinkedIn</span>
+      </a>
+
+      <a
+        href="https://www.freecodecamp.org/certification/bobthejavascriptbuilder/javascript-algorithms-and-data-structures"
+        rel="noreferrer"
+        target="_blank"
+      >
+        JavaScript Algorithms and Data Structures - freeCodeCamp (Certification)
+      </a>
+
+      <!-- Link to your resume section -->
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="card">
+      <h2>À Propos de Moi</h2>
+      <p>Insights into ma passion pour la gestion de projet et le design.</p>
+      <a href="/about.html" class="btn card-link">Plus Sur Moi</a>
+      <!-- Link to your about me section -->
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="card">
+      <h2>Compétences</h2>
+      <p>
+        En tant que développeur web full-stack, voici mes compétences
+        principales :
+      </p>
+      <ul class="flex-me2">
+        <li class="pills">Customer Service</li>
+        <li class="pills">Project Management</li>
+        <li class="pills">Sales</li>
+        <li class="pills">Javascript</li>
+        <li class="pills">ReactJS</li>
+        <li class="pills">mySQL</li>
+        <li class="pills">API Development</li>
+        <!-- Add other skills as needed -->
+      </ul>
+      <!-- Additional Skills or Certifications -->
+      <h3>Autres compétences et certifications :</h3>
+      <ul>
+        <!-- do this with an anchor element <li>HTML, CSS, JavaScript - Codecademy (Certification)</li> -->
+
+        <li>Coffee Barista - Starbucks (Certification)</li>
+        <li>
+          Learn Git by Doing: A step-by-step guide to version control - Udemy
+          (Certification)
+        </li>
+        <!-- Add other certifications as needed -->
+      </ul>
+      <!-- Link to your GitHub profile or portfolio -->
+      <br />
+      <a
+        href="https://github.com/Peterturn"
+        rel="noreferrer"
+        target="_blank"
+        class="card-link btn"
+      >
+        GitHub
+      </a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>
+        Merci d'avoir exploré mon portfolio numérique. N'hésitez pas à me
+        contacter pour toute question sur Linked-In.
+      </p>
+    </footer>
+    <script>
+      function getRandomColor() {
+        const colors = ["#797ef6", "#4adede", "#1aa7ec", "#e63b60", "#ffe45c"];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+
+      window.onload = function () {
+        const pills = document.querySelectorAll(".pills");
+        pills.forEach(function (pill) {
+          pill.style.backgroundColor = getRandomColor();
+        });
+      };
+    </script>
+  </body>
+</html>
