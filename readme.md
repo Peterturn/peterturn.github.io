@@ -48,3 +48,6 @@ Cordialement,
 
 [Nom de l'Étudiant]  
 [Coordonnées]
+
+Pour voir un exemple en direct, visitez [https://peterturn.github.io/](https://peterturn.github.io/).
+
