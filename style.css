@@ -131,11 +131,23 @@ body {
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-direction: column; /* Set flex direction to column for mobile view */
+        align-items: center; /* Align items to the center horizontally */
+        padding: 10px;
     }
-    body > nav > ul > li{
-        margin: 15px 0;
-        font-size: large;
+    
+    nav li {
+        margin: 10px 0; /* Add some vertical margin between list items */
+        text-align: center; /* Center the text within list items */
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #000000;
+        padding: 8px 12px;
+        border-radius: 12px;
+        background-color: #ccc;
+        display: block; /* Ensure each link takes full width within its parent */
     }
 }
