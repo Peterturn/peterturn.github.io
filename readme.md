@@ -1,35 +1,50 @@
-# Morpion (Tic-Tac-Toe) - Projet CSS
+# Portfolio Numérique - [Nom de l'Étudiant]
 
-Bienvenue dans le projet Morpion ! L'objectif de ce projet est de rendre la page du Morpion esthétiquement agréable en utilisant le langage CSS. Suivez les instructions ci-dessous pour améliorer le style de votre jeu.
+Bienvenue sur mon portfolio numérique ! Ce projet présente une sélection de travaux, des compétences, et offre un aperçu de mon parcours académique. Explorez chaque section pour en savoir plus.
 
-## Instructions
+## Résumé du Projet Final
 
-1. **Style du tableau :**
-   - Ajoutez des styles au tableau pour le rendre visuellement attrayant.
-   - Expérimentez avec les couleurs, les ombres, ou toute autre propriété CSS pour améliorer l'apparence générale du tableau.
+### Portfolio de Projets
 
-2. **Cellules interactives :**
-   - Ajoutez des styles pour rendre les cellules plus interactives. Par exemple, changez la couleur de fond lorsque la souris survole une cellule.
+Découvrez la diversité de mon travail, des projets de gestion aux projets de design.
 
-3. **En-tête du jeu :**
-   - Personnalisez l'en-tête du jeu (Tour de Joueur) en ajoutant des styles. Utilisez des polices de caractères attrayantes et ajustez la taille du texte.
+- [Mon Blog](#) <!-- Remplacez '#' par le lien vers votre page "monBlog.html" -->
+- [Morpion](#) <!-- Remplacez '#' par le lien vers votre page "morpion.html" -->
+- [Autre Projet](#) <!-- Ajoutez d'autres projets au besoin -->
 
-4. **Bouton de réinitialisation :**
-   - Améliorez l'apparence du bouton de réinitialisation. Ajoutez des styles pour le rendre plus visible et attrayant.
+### Curriculum Vitae
 
-5. **Responsivité :**
-   - Assurez-vous que votre jeu est responsive. Testez-le sur différents appareils et ajustez les styles si nécessaire pour une expérience utilisateur optimale.
+Consultez un aperçu complet de mon parcours académique, des cours pertinents et des compétences acquises.
 
-## Ressources utiles
+- [LinkedIn](#) <!-- Remplacez '#' par le lien réel vers votre profil LinkedIn -->
+- [Certification JavaScript](#) <!-- Remplacez '#' par le lien vers votre certification JavaScript -->
 
-- [MDN Web Docs - CSS](https://developer.mozilla.org/fr/docs/Web/CSS) : Documentation complète sur les propriétés CSS.
-- [CSS Tricks](https://css-tricks.com/) : Astuces et tutoriels CSS.
+### À Propos de Moi
 
-## Comment tester votre travail
+En savoir plus sur la personne derrière les projets. Partagez ma passion pour la gestion de projet et le design.
 
-1. Clonez ce dépôt sur votre ordinateur.
-2. Ouvrez le fichier HTML dans un navigateur web pour voir votre jeu.
-3. Appliquez vos styles CSS dans le fichier existant ou créez un nouveau fichier CSS.
-4. Rafraîchissez votre navigateur pour voir les changements.
+- [Plus Sur Moi](#) <!-- Remplacez '#' par le lien vers votre page "À Propos de Moi.html" -->
 
-N'hésitez pas à exprimer votre créativité et à personnaliser le style du Morpion selon vos préférences ! Bonne chance !
+### Compétences
+
+Découvrez les compétences qui définissent ma boîte à outils professionnelle.
+
+- Gestion de Projet
+- Développement Front-end (HTML, CSS)
+- Photo Shop...
+- Autres compétences et certifications
+
+
+> Remarque : Les compétences ci-dessus sont des exemples. Assurez-vous de remplacer cette liste par vos propres compétences, technologies maîtrisées et certifications pertinentes.
+
+
+- [GitHub](#) <!-- Remplacez '#' par le lien vers votre profil GitHub -->
+
+---
+
+N'hésitez pas à explorer chaque section pour en savoir plus sur mes compétences et projets. Si vous avez des questions ou souhaitez vous connecter, n'hésitez pas à me contacter.
+
+Cordialement,
+
+[Nom de l'Étudiant]  
+[Coordonnées]
