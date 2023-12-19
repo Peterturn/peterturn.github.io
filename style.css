@@ -19,43 +19,7 @@ header {
     color: #fff; /* Adjust as needed */
 }
 /* Styling navigation menu */
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-}
-nav{
 
-    padding: 10px;
-}
-
-
-nav a {
-    text-decoration: none;
-    color: #000000; /* Adjust link color as needed */
-    padding: 8px 12px;
-    border-radius: 12px;
-    flex: 1;
-    background-color: #ccc;
-}
-
-/* Styling links in content sections */
-section a {
-    text-decoration: none;
-    color: #007BFF; /* Adjust link color as needed */
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 10px;
-    border: 1px solid #007BFF; /* Add border for button-like appearance */
-    border-radius: 5px;
-}
-
-/* Hover effect for links */
-section a:hover,
-nav a:hover {
-    background-color: #007BFF; /* Adjust hover background color */
-    color: #fff; /* Adjust hover text color */
-}
 
 /* flex-me */
 .flex-me {
@@ -78,7 +42,7 @@ nav a:hover {
     padding: 8px;
     margin: 5px;
 }
-.btn {
+.my-btn {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -89,6 +53,11 @@ nav a:hover {
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
+}
+.div-inline-flex{
+    display: inline-flex;
+    /* justify center */
+    justify-content: center;
 }
 
 #linkedIn {
@@ -129,25 +98,14 @@ body {
     body {
         font-size: 14px;
     }
-
-    nav ul {
+    .sm-screen{
         display: flex;
-        flex-direction: column; /* Set flex direction to column for mobile view */
-        align-items: center; /* Align items to the center horizontally */
-        padding: 10px;
+        flex-direction: column;
     }
     
-    nav li {
-        margin: 10px 0; /* Add some vertical margin between list items */
-        text-align: center; /* Center the text within list items */
-    }
-    
-    nav a {
-        text-decoration: none;
-        color: #000000;
-        padding: 8px 12px;
-        border-radius: 12px;
-        background-color: #ccc;
-        display: block; /* Ensure each link takes full width within its parent */
+    .div-inline-flex{
+        justify-content: center;
+        align-self: center;
+        max-width: 50%;
     }
 }

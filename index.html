@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Peter's Example Portfolio Site</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.css" />
   </head>
   <body>
     <!-- Header Section -->
-    <header>
+    <header class="my-5">
       <h1>Bienvenue sur Mon Portfolio Numérique</h1>
       <p>
         Cette section présente une sélection de projets que j'ai réalisés ce
@@ -16,15 +17,18 @@
       </p>
 
       <!-- Navigation Menu -->
-      <nav>
-        <ul>
-          <li><a href="#projects">Mon Projects</a></li>
-          <li><a href="#resume">Voir Mon CV</a></li>
-          <li><a href="#skills">Compétences</a></li>
-          <li><a href="#about">Moi</a></li>
-        </ul>
-      </nav>
+      
+        <div class="d-flex justify-content-center my-5 sm-screen">
+          <a class="d-flex flex-column justify-content-center align-items-center btn btn-primary me-2 mb-2" href="#projects">Mon Projects</a>
+          <a class="d-flex flex-column justify-content-center align-items-center btn btn-primary me-2 mb-2" href="#resume">Voir Mon CV</a>
+          <a class="d-flex flex-column justify-content-center align-items-center btn btn-primary me-2 mb-2" href="#skills">Compétences</a>
+          <a class="d-flex flex-column justify-content-center align-items-center btn btn-primary me-2 mb-2" href="#about">Moi</a>
+        </div>
+
     </header>
+
+
+    
     <!-- Main Content Sections -->
 
     <!-- Projects Section -->
@@ -35,20 +39,20 @@
         de design.
       </p>
       <div class="flex-me2">
-        <a href="/tic-tac.html" class="btn card-link">Morpion</a>
+        <a href="/tic-tac.html" class="btn btn-primary me-3 mb-2">Morpion</a>
         <a
           href="https://spokesolve.com/team"
           rel="noreferrer"
           target="_blank"
-          class="btn card-link"
-          >Site Pro</a
+          class="btn-primary btn me-3 mb-2"
+          >SpokeSolve États-Unis</a
         >
         <a
           href="https://www.explorevaucluse.com/accueil/"
           rel="noreferrer"
           target="_blank"
-          class="btn card-link"
-          >Explore Vaucluse</a
+          class="btn btn-primary mb-2"
+          >Explore Vaucluse FR</a
         >
       </div>
       <!-- Link to your projects section -->
@@ -61,24 +65,27 @@
         Un aperçu complet de mon parcours académique, des cours pertinents et
         des compétences acquises.
       </p>
-      <a
-        class="flex-me btn"
-        href="https://www.linkedin.com/in/peter-turn-may/"
-        rel="noreferrer"
-        target="_blank"
-      >
-        <img id="linkedIn" src="LinkedIn_icon.svg" alt="" />
-        <span>LinkedIn</span>
-      </a>
+      <div class="div-inline-flex">
+        <a
+          class=" py-2 btn btn-primary me-1 d-flex flex-column justify-content-center align-items-center"
+          href="https://www.linkedin.com/in/peter-turn-may/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img id="linkedIn" src="LinkedIn_icon.svg" alt="" />
+          <span>LinkedIn</span>
+        </a>
 
-      <a
-        href="https://www.freecodecamp.org/certification/bobthejavascriptbuilder/javascript-algorithms-and-data-structures"
-        rel="noreferrer"
-        target="_blank"
-      >
-        JavaScript Algorithms and Data Structures - freeCodeCamp (Certification)
-      </a>
-
+        <a
+          class="btn btn-primary d-flex flex-column justify-content-center align-items-center"
+          href="https://www.freecodecamp.org/certification/bobthejavascriptbuilder/javascript-algorithms-and-data-structures"
+          rel="noreferrer"
+          target="_blank"
+        >
+          JavaScript 
+          (Certification)
+        </a>
+      </div>
       <!-- Link to your resume section -->
     </section>
 
@@ -86,7 +93,7 @@
     <section id="about" class="card">
       <h2>À Propos de Moi</h2>
       <p>Insights into ma passion pour la gestion de projet et le design.</p>
-      <a href="/about.html" class="btn card-link">Plus Sur Moi</a>
+      <a href="/about.html" class="btn-primary btn me-3 w-25 align-self-center">Plus Sur Moi</a>
       <!-- Link to your about me section -->
     </section>
 
@@ -98,13 +105,13 @@
         principales :
       </p>
       <ul class="flex-me2">
-        <li class="pills">Customer Service</li>
-        <li class="pills">Project Management</li>
-        <li class="pills">Sales</li>
-        <li class="pills">Javascript</li>
-        <li class="pills">ReactJS</li>
-        <li class="pills">mySQL</li>
-        <li class="pills">API Development</li>
+        <li class="badge rounded-pill me-1 mb-1">Customer Service</li>
+        <li class="badge rounded-pill me-1 mb-1">Project Management</li>
+        <li class="badge rounded-pill me-1 mb-1">Sales</li>
+        <li class="badge rounded-pill me-1 mb-1">Javascript</li>
+        <li class="badge rounded-pill me-1 mb-1">ReactJS</li>
+        <li class="badge rounded-pill me-1 mb-1">mySQL</li>
+        <li class="badge rounded-pill me-1 mb-1">API Development</li>
         <!-- Add other skills as needed -->
       </ul>
       <!-- Additional Skills or Certifications -->
@@ -125,7 +132,7 @@
         href="https://github.com/Peterturn"
         rel="noreferrer"
         target="_blank"
-        class="card-link btn"
+        class="btn btn-primary w-25 align-self-center"
       >
         GitHub
       </a>
@@ -140,14 +147,23 @@
     </footer>
     <script>
       function getRandomColor() {
-        const colors = ["#797ef6", "#4adede", "#1aa7ec", "#e63b60", "#ffe45c"];
+        const colors = [
+          "bg-primary",
+          "bg-secondary",
+          "bg-success",
+          "bg-danger",
+          "bg-warning",
+          "bg-info",
+          "bg-light",
+          "bg-dark",
+        ];
         return colors[Math.floor(Math.random() * colors.length)];
       }
 
       window.onload = function () {
-        const pills = document.querySelectorAll(".pills");
+        const pills = document.querySelectorAll(".rounded-pill");
         pills.forEach(function (pill) {
-          pill.style.backgroundColor = getRandomColor();
+          pill.classList.add(getRandomColor());
         });
       };
     </script>
