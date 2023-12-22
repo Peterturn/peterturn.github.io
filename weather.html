@@ -108,6 +108,7 @@
                 <img class="weather-image" src="http://openweathermap.org/img/wn/${
                   dailyWeather.weather[0].icon
                 }.png" alt="">
+                <div>${dailyWeather.weather[0].description}</div>
                 <div>${Math.round(dailyWeather.temp.min)} ℃ / ${Math.round(
               dailyWeather.temp.max,
             )} ℃</div>
