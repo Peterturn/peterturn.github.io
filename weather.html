@@ -34,6 +34,10 @@
         /* remove anchor decoration */
         text-decoration: none;
       }
+      weather-image {
+        min-width: 50px;
+        min-height: 50px;
+      }
       .loading-text {
         text-align: center;
         color: white;
@@ -101,7 +105,7 @@
             forecastElement.innerHTML = `
             <div class="card-header">${dayOfWeek}</div>
             <div class="card-body">
-                <img src="http://openweathermap.org/img/wn/${
+                <img class="weather-image" src="http://openweathermap.org/img/wn/${
                   dailyWeather.weather[0].icon
                 }.png" alt="">
                 <div>${Math.round(dailyWeather.temp.min)} ℃ / ${Math.round(
