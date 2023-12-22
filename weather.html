@@ -105,9 +105,7 @@
             forecastElement.innerHTML = `
             <div class="card-header">${dayOfWeek}</div>
             <div class="card-body">
-                <img class="weather-image" src="http://openweathermap.org/img/wn/${
-                  dailyWeather.weather[0].icon
-                }.png" alt="">
+                <img class="weather-image" src="/weather-assests/${dailyWeather.weather[0].icon}.png" alt="">
                 <div>${dailyWeather.weather[0].description}</div>
                 <div>${Math.round(dailyWeather.temp.min)} ℃ / ${Math.round(
               dailyWeather.temp.max,
