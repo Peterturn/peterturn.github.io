@@ -89,7 +89,7 @@
             "Saturday",
           ];
 
-          data.daily.slice(0, 5).forEach((dailyWeather) => {
+          data.daily.slice(0, 5).forEach((dailyWeather, index) => {
             const nextDay = new Date(dailyWeather.dt * 1000);
             const dayOfWeek = days[nextDay.getDay()];
 
@@ -99,7 +99,7 @@
               "weather-forecast",
               "card",
               "text-white",
-              "bg-dark",
+              index == 0 ? "bg-info" : "bg-dark",
               "mb-3",
             );
             forecastElement.innerHTML = `
