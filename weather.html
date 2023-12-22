@@ -34,6 +34,10 @@
         /* remove anchor decoration */
         text-decoration: none;
       }
+      #change-temp{
+        margin-left: auto;
+        margin-right: auto;
+      }
       .weather-image {
         min-width: 50px;
         min-height: 50px;
@@ -45,6 +49,7 @@
         margin-top: 20px;
         animation: blinkDots 1.5s infinite;
       }
+
       @keyframes blinkDots {
         0%, 20%, 100% {
           color: transparent;
@@ -60,6 +65,7 @@
   
     <h1 class="text-light">Five Day Weather Forecast</h1>
     <div id="weatherContainer" class="weather-container"></div>
+    <button id="change-temp" type="button" class="btn btn-warning">C / F</button>
     <p id="loadingText" class="loading-text">Loading...</p>
     <a href="/index.html" class="home-btn">
       <span class="text-light" style="font-size: 4rem;"><</span>
@@ -72,6 +78,10 @@
       document.addEventListener("DOMContentLoaded", function () {
         const weatherContainer = document.getElementById("weatherContainer");
         const loadingText = document.getElementById("loadingText");
+        const changeTemp = document.getElementById("change-temp");
+        let isCelsius = true;
+        let tempsMin = [];
+        let tempsMax = [];
 
         function makeWeatherUrl(latitude, longitude) {
           const apiKey = "94a3a099307113a26aec8dec776c0e17";
@@ -92,7 +102,8 @@
           data.daily.slice(0, 5).forEach((dailyWeather, index) => {
             const nextDay = new Date(dailyWeather.dt * 1000);
             const dayOfWeek = days[nextDay.getDay()];
-
+            tempsMin.push(Math.round(dailyWeather.temp.min));
+            tempsMax.push(Math.round(dailyWeather.temp.max));
             const forecastElement = document.createElement("div");
 
             forecastElement.classList.add(
@@ -107,7 +118,7 @@
             <div class="card-body">
                 <img class="weather-image" src="/weather-assests/${dailyWeather.weather[0].icon}.png" alt="">
                 <div>${dailyWeather.weather[0].description}</div>
-                <div>${Math.round(dailyWeather.temp.min)} ℃ / ${Math.round(
+                <div class="weather-temp">${Math.round(dailyWeather.temp.min)} ℃ / ${Math.round(
               dailyWeather.temp.max,
             )} ℃</div>
             </div>
@@ -118,6 +129,8 @@
 
           // Hide loading text once data is loaded
           loadingText.style.display = "none";
+          changeTemp.style.display = "block";
+
         }
 
         function fetchData(latitude, longitude) {
@@ -125,6 +138,7 @@
 
           // Show loading text while fetching data
           loadingText.style.display = "block";
+          changeTemp.style.display = "none";
           
           fetch(url)
             .then((response) => response.json())
@@ -135,6 +149,24 @@
               console.error("Error fetching weather data:", error);
             });
         }
+
+        //IF IS CELSIUS IS TRUE, .weather-temp CHANGE TO FAHRENHEIT using stored tempsMin and tempsMax
+        function changeTemperature (){
+          const weatherTemp = document.querySelectorAll(".weather-temp");
+          if (isCelsius) {
+            weatherTemp.forEach((temp, index) => {
+              temp.innerHTML = `${Math.round([index] * 1.8 + 32)} ℉ / ${Math.round(tempsMax[index] * 1.8 + 32)} ℉`;
+            });
+            isCelsius = false;
+          } else {
+            weatherTemp.forEach((temp, index) => {
+              temp.innerHTML = `${Math.round(tempsMin[index])} ℃ / ${Math.round(tempsMax[index])} ℃`;
+            });
+            isCelsius = true;
+          }
+        }
+
+        changeTemp.addEventListener("click", changeTemperature);
 
         function getLocation() {
           if (navigator.geolocation) {
