@@ -26,15 +26,29 @@
         text-align: center;
         margin-top: 10px;
       }
-        .home-btn {
-            display: flex;;
-            justify-content: center;
-            align-items: center;
-            margin: 20px;
-            /* remove anchor decoration */
-            text-decoration: none;
-            
+      .home-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        /* remove anchor decoration */
+        text-decoration: none;
+      }
+      .loading-text {
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        animation: blinkDots 1.5s infinite;
+      }
+      @keyframes blinkDots {
+        0%, 20%, 100% {
+          color: transparent;
         }
+        50% {
+          color: white;
+        }
+      }
     </style>
   </head>
 
@@ -42,16 +56,18 @@
   
     <h1 class="text-light">Five Day Weather Forecast</h1>
     <div id="weatherContainer" class="weather-container"></div>
+    <p id="loadingText" class="loading-text">Loading...</p>
     <a href="/index.html" class="home-btn">
-        <span class="text-light" style="font-size: 4rem;"><</span>
-        <span class="material-symbols-outlined text-light" style="font-size: 4rem;">
+      <span class="text-light" style="font-size: 4rem;"><</span>
+      <span class="material-symbols-outlined text-light" style="font-size: 4rem;">
         home
-        </span>
+      </span>
     </a>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const weatherContainer = document.getElementById("weatherContainer");
+        const loadingText = document.getElementById("loadingText");
 
         function makeWeatherUrl(latitude, longitude) {
           const apiKey = "94a3a099307113a26aec8dec776c0e17";
@@ -96,10 +112,17 @@
 
             weatherContainer.appendChild(forecastElement);
           });
+
+          // Hide loading text once data is loaded
+          loadingText.style.display = "none";
         }
 
         function fetchData(latitude, longitude) {
           const url = makeWeatherUrl(latitude, longitude);
+
+          // Show loading text while fetching data
+          loadingText.style.display = "block";
+          
           fetch(url)
             .then((response) => response.json())
             .then((data) => {
