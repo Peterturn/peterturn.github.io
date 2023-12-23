@@ -81,7 +81,13 @@ header {
     display: block;
     margin-top: 10px;
   }
-  
+  .add-border{
+        border: 2px solid #000000;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
   footer > p{
     text-align: center;
     padding: 10px 30px;
