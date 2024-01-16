@@ -1,0 +1,121 @@
+/* Resetting default list styles */
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size: 16px; /* Default font size for larger screens */
+    margin: 0; /* Add this line to remove default margin */
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    /* add a background color with a gradient linear-gradient(to right, #d7e9f7, #000000) and an image behind the gradient */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.401), white), url(peter-herrmann-ZImdf70KrSU-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff; /* Adjust as needed */
+}
+/* Styling navigation menu */
+
+
+/* flex-me */
+.flex-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.flex-me2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* make a pill for li elements */
+.pills{
+    border-radius: 20px;
+    background-color: #ccc;
+    padding: 8px;
+    margin: 5px;
+}
+.my-btn {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    max-width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.div-inline-flex{
+    display: inline-flex;
+    /* justify center */
+    justify-content: center;
+}
+
+#linkedIn {
+    max-width: 30px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+  }
+  
+  .card-link {
+    text-decoration: none;
+    color: #007BFF;
+    display: block;
+    margin-top: 10px;
+  }
+  .add-border{
+        border: 2px solid #000000;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  footer > p{
+    text-align: center;
+    padding: 10px 30px;
+
+  }
+
+/* Mobile-first design */
+body {
+    font-size: 16px; /* Default font size for larger screens */
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* Adjust styles for screens up to 768px width */
+    body {
+        font-size: 14px;
+    }
+    .sm-screen{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .div-inline-flex{
+        justify-content: center;
+        align-self: center;
+        max-width: 50%;
+    }
+    .firstbtn{
+        background-color: red !important;
+    }
+}

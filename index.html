@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peter's Example Portfolio Site</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="mb-5">
+      <h1>Bienvenue sur Mon Portfolio Numérique</h1>
+      <p>
+        Cette section présente une sélection de projets que j'ai réalisés ce
+        semestre.
+      </p>
+
+      <!-- Navigation Menu -->
+
+      <div class="d-flex justify-content-center my-5 sm-screen">
+        <a
+          class="firstbtn d-flex flex-column justify-content-center align-items-center btn btn-primary me-2 mb-2"
+          href="#projects"
+          >Mon Projects</a
+        >
+        <a
+          class="d-flex flex-column justify-content-center align-items-center btn btn-primary me-2 mb-2"
+          href="#resume"
+          >Voir Mon CV</a
+        >
+        <a
+          class="d-flex flex-column justify-content-center align-items-center btn btn-primary me-2 mb-2"
+          href="#skills"
+          >Compétences</a
+        >
+        <a
+          class="d-flex flex-column justify-content-center align-items-center btn btn-primary me-2 mb-2"
+          href="#about"
+          >Moi</a
+        >
+      </div>
+    </header>
+
+    <!-- Main Content Sections -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="card">
+      <h2>Portfolio de Projets</h2>
+      <p>
+        Explorez la diversité de mon travail, des projets de gestion aux projets
+        de design.
+      </p>
+      <div class="flex-me2">
+        <a href="/tic-tac.html" class="btn btn-primary me-3 mb-2">Morpion</a>
+        <a href="/weather.html" class="btn btn-primary me-3 mb-2">App Météo</a>
+        <a
+          href="https://spokesolve.com/team"
+          rel="noreferrer"
+          target="_blank"
+          class="btn-primary btn me-3 mb-2"
+          >SpokeSolve États-Unis</a
+        >
+        <a
+          href="https://www.explorevaucluse.com/accueil/"
+          rel="noreferrer"
+          target="_blank"
+          class="btn btn-primary mb-2 me-3"
+          >Explore Vaucluse FR</a
+        >
+        <a
+          href="https://johndrake31.github.io/"
+          rel="noreferrer"
+          target="_blank"
+          class="btn btn-info mb-2 me-3"
+          >ReactJS Sports App</a
+        >
+        <a
+        class="btn btn-primary me-3 mb-2"
+        href="https://www.freecodecamp.org/certification/bobthejavascriptbuilder/javascript-algorithms-and-data-structures"
+        rel="noreferrer"
+        target="_blank"
+      >
+        JavaScript (Certification)
+      </a>
+      </div>
+      <!-- Link to your projects section -->
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="card">
+      <h2>À Propos de Moi</h2>
+      <p>
+        Un aperçu complet de mon parcours académique, des cours pertinents et
+        des compétences acquises.
+      </p>
+      <div class="div-inline-flex">
+        <a
+          class="py-2 btn btn-primary me-1 d-flex flex-column justify-content-center align-items-center"
+          href="https://www.linkedin.com/in/peter-turn-may/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img id="linkedIn" src="LinkedIn_icon.svg" alt="" />
+          <span>LinkedIn</span>
+        </a>
+
+      
+      </div>
+      <!-- Link to your resume section -->
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="card">
+      <h2>Curriculum Vitae</h2>
+      <p>Insights into ma passion pour la gestion de projet et le design.</p>
+      <a href="/about.html" class="btn-primary btn me-3 w-25 align-self-center"
+        >Plus Sur Moi</a
+      >
+      <!-- Link to your about me section -->
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="card">
+      <h2>Compétences</h2>
+      <p>
+        En tant que développeur web full-stack, voici mes compétences
+        principales :
+      </p>
+      <ul class="flex-me2">
+        <li class="badge rounded-pill me-1 mb-1">Customer Service</li>
+        <li class="badge rounded-pill me-1 mb-1">Project Management</li>
+        <li class="badge rounded-pill me-1 mb-1">Sales</li>
+        <li class="badge rounded-pill me-1 mb-1">Javascript</li>
+        <li class="badge rounded-pill me-1 mb-1">ReactJS</li>
+        <li class="badge rounded-pill me-1 mb-1">mySQL</li>
+        <li class="badge rounded-pill me-1 mb-1">API Development</li>
+        <li class="badge rounded-pill me-1 mb-1">&#128514; Coffee Barista &#128514;<span></span></li>
+        <!-- Add other skills as needed -->
+      </ul>
+      <!-- Additional Skills or Certifications -->
+      <h3>Autres compétences et certifications :</h3>
+      <ul>
+        <!-- do this with an anchor element <li>HTML, CSS, JavaScript - Codecademy (Certification)</li> -->
+
+        <li class="badge rounded-pill me-1 mb-1">
+           Git version control - Udemy
+        </li>
+        <!-- Add other certifications as needed -->
+      </ul>
+      <!-- Link to your GitHub profile or portfolio -->
+      <br />
+      <h4>Consultez mon GitHub:</h4>
+      <a
+        href="https://github.com/Peterturn"
+        rel="noreferrer"
+        target="_blank"
+        class="btn btn-primary w-25 align-self-center"
+      >
+        GitHub
+      </a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>
+        Merci d'avoir exploré mon portfolio numérique. N'hésitez pas à me
+        <a
+          rel="noreferrer"
+          target="_blank"
+          href="https://www.linkedin.com/in/peter-turn-may/"
+          >contacter</a
+        >
+        pour toute question sur Linked-In.
+      </p>
+    </footer>
+    <script>
+      function getRandomColor() {
+        const colors = [
+          "bg-primary",
+          "bg-secondary",
+          "bg-success",
+          "bg-danger",
+          "bg-warning",
+          "bg-info",
+          "bg-light",
+          "bg-dark",
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+
+      window.onload = function () {
+        const pills = document.querySelectorAll(".rounded-pill");
+        pills.forEach(function (pill) {
+          pill.classList.add(getRandomColor());
+        });
+      };
+    </script>
+  </body>
+</html>
